@@ -124,6 +124,17 @@ y.member2 = value; // at a time we can use only one member
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 
+### 💛 SELF REFRENTIAL STRUCTURE
+➔ one structure which have pointer as member and which point to the same type of structure <br/>
+♻️ *overview* - [link](https://youtu.be/fpjAFx4v4oU)
+
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1UKTWapJ8DiLaeHj8vt3lw6Et8Qk7yftoLYsKVfTRThEZlJgWBLl5eAwdei3RGwUyvFTmREGh5ZTUNZZK2cF_4EAbzfIrCvMLuyysxzlTZrObpidtuLGJD1frK1x_1qu4j-Q2ryUrT6YlgUQ9q5KzE93mnwb550LXvzQCRkpux39OUMmgKOSrpW79/s1000/Self%20Referential%20Structure.png" width="500" height="300">
+
+![](https://gcdnb.pbrd.co/images/RGUggoWTOpNi.jpg?o=1)
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+
 ### 💙 POINTER
 ➔ variable that contains the address of another variable. it is a variable that points to any other variable <br/>
 ➔ Pointers are used to dynamically allocate or deallocate memory using methods such as malloc(), realloc(), calloc(), and free(). <br/>
@@ -140,3 +151,5 @@ printf("%p\n", ptr) ; // memory address of myAge with the pointer (0x7ffe5367e04
 printf("%d\n", *ptr) ; // using pointer the value of myAge (43)
 
 ```
+
+![Pointer](https://www.w3resource.com/w3r_images/c_pointer.png)
