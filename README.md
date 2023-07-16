@@ -42,6 +42,52 @@
 ➔ Data is not arranged in sequence. <br/>
 ➔ Data cannot be traversed in a single run. <br/>
 ➔ Implementation is difficult. <br/>
-➔ EX- tree, graph.
- 
+➔ EX- tree, graph. <br/>
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+
+### 💙 STRUCTURE
+➔ allow us to combine the data of different types <br/>
+➔ use to create complex datatype which contains different dataTypes <br/>
+➔ similar to array but in array we can store only one dataType but in struct we can store multiple dataTypes <br/>
+➔ user defined dataType <br/>
+
+📃 Example - if we want to store the inforamtion of 1000 employee of XYZ company and the information is like NAME, ADDRESS, EMAIL, EMPLOYEE_ID ==> then we can create the STRUCT one time with different dataTypes like `char name` , `char address[]` , `int email` , `float employee_id` to store the info of every employee 
+
+```
+
+struct structure_name   
+{  
+    data_type member1;  
+    data_type member2;  
+    .  
+    .  
+    data_type memeber;  
+};
+
+```
+➔ the memory allocation for struct cannot create Until we decalre the struct <br/>
+➔ when we declare the struct all the memory allocate bcz of user defined datatype <br/>
+
+```
+
+// declaring struct here 
+struct structure_name x;
+
+// access the element of struct using structure-member-operator (.)
+x.member1 = value;
+x.member2 = value;
+
+```
+
+![struct](https://static.javatpoint.com/cpages/images/structure_memory_allocation.png)
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+
+
+
+
+
 
