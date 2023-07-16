@@ -132,6 +132,9 @@ y.member2 = value; // at a time we can use only one member
 
 ![](https://gcdnb.pbrd.co/images/RGUggoWTOpNi.jpg?o=1)
 
+*here var1 struct member named `var1.ptr` have the address of another struct named var2* <br/>
+*so if we print `var1.ptr` then we are pointing to the `var2` struct and if we want to access the member of var2 struct using the var1 pointer then use `var1.ptr->member_name_of_var2`* <br/>
+
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 
