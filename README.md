@@ -86,8 +86,39 @@ x.member2 = value;
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 
+### 💚 UNION
+➔ very similar to Struct ( user defined dataType)
+➔ difference between Struct and Union is that -> in struct each element has its own storage memory allocation but in union there is only single shared memory location which is **equal to the size of largest data member** means the dataType in union which needed the highest bytes will become the single shared memory location
 
+📃 Example - **why we need the Union=** i have to play the drums in different time in morning, in afternoon, in night AND in morning i need 2 sticks to play drum AND in afternoon i need 3 sticks to play drum AND in night i need 2 sticks to play drum ==> so if i go to market then i take only 3 sticks not the 2+3+2=6 sticks because AT A TIME ONLY ONE DRUM IS PLAYING (so at a time we are using only one element from struct that time make union) ➔ Union cannot handle all members at once
 
+```
 
+union union_name   
+{  
+    data_type member1;  
+    data_type member2;  
+    .  
+    .  
+    data_type memeber;  
+};  
+
+```
+➔ the memory allocation for union cannot create Until we decalre the union <br/>
+➔ when we declare the union all the memory allocate bcz of user defined datatype <br/>
+
+```
+
+// declaring struct here 
+union union_name x , y ;
+
+// access the element of struct using structure-member-operator (.)
+x.member1 = value; // at a time we can use only one member
+y.member2 = value; // at a time we can use only one member
+
+// if we try to acces more than one member then the first assigned member's value will be currept and the second assigned member's value will be become original
+
+```
+![union](https://3.bp.blogspot.com/-JfMM_AsdMrw/Wz9g2ms6RJI/AAAAAAAAIDY/spleowI62oUxHVBV1XbXneLlU8k3at_zgCLcBGAs/s1600/c-structure-union%2Bcopy.jpg)
 
 
