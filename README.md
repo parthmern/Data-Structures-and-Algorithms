@@ -88,7 +88,7 @@ x.member2 = value;
 
 ### 💚 UNION
 ➔ very similar to Struct ( user defined dataType)
-➔ difference between Struct and Union is that -> in struct each element has its own storage memory allocation but in union there is only single shared memory location which is **equal to the size of largest data member** means the dataType in union which needed the highest bytes will become the single shared memory location
+➔ difference between Struct and Union is that -> in struct each element has its own storage memory allocation but in union there is only single shared memory location which is **equal to the size of largest data member** means the dataType in union which needed the highest bytes means MAX SIZE will become the single shared memory location
 
 📃 Example - **why we need the Union=** i have to play the drums in different time in morning, in afternoon, in night AND in morning i need 2 sticks to play drum AND in afternoon i need 3 sticks to play drum AND in night i need 2 sticks to play drum ==> so if i go to market then i take only 3 sticks not the 2+3+2=6 sticks because AT A TIME ONLY ONE DRUM IS PLAYING (so at a time we are using only one element from struct that time make union) ➔ Union cannot handle all members at once
 
@@ -121,4 +121,22 @@ y.member2 = value; // at a time we can use only one member
 ```
 ![union](https://3.bp.blogspot.com/-JfMM_AsdMrw/Wz9g2ms6RJI/AAAAAAAAIDY/spleowI62oUxHVBV1XbXneLlU8k3at_zgCLcBGAs/s1600/c-structure-union%2Bcopy.jpg)
 
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 
+### 💙 POINTER
+➔ variable that contains the address of another variable. it is a variable that points to any other variable <br/>
+➔ Pointers are used to dynamically allocate or deallocate memory using methods such as malloc(), realloc(), calloc(), and free(). <br/>
+➔ size depends on architechure ex. 2 byte for 32 bit <br/>
+
+```
+
+int myAge = 43 ;
+int* ptr = &myAge ; // here ptr is pointer and we are storing the address of myAge variable in ptr pointer
+
+printf("%d\n", myAge) ; // value of myAge (43)
+printf("%p\n", &myAge) ; // memory address of myAge (0x7ffe5367e044)
+printf("%p\n", ptr) ; // memory address of myAge with the pointer (0x7ffe5367e044)
+printf("%d\n", *ptr) ; // using pointer the value of myAge (43)
+
+```
