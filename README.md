@@ -1,6 +1,6 @@
 # Data-Structures-and-Algorithms
 
-### ♥ **What is Data-Structure**
+## ♥ **What is Data-Structure**
 
 ➔ A data structure is a storage that is used to store and organize data. <br/>
 ➔ It is a way of arranging data on a computer so that it can be accessed and updated efficiently. <br/>
@@ -10,7 +10,7 @@
 ♻️ _Overview_ - [link](urlhere)
 
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖
-### 💛 **Classification / types**
+## 💛 **Classification / types**
 
 ![img](https://static.javatpoint.com/ds/images/ds-introduction2.png)
 
@@ -47,7 +47,7 @@
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 
-### 💙 STRUCTURE
+## 💙 STRUCTURE
 ➔ allow us to combine the data of different types <br/>
 ➔ use to create complex datatype which contains different dataTypes <br/>
 ➔ similar to array but in array we can store only one dataType but in struct we can store multiple dataTypes <br/>
@@ -86,7 +86,7 @@ x.member2 = value;
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 
-### 💚 UNION
+## 💚 UNION
 ➔ very similar to Struct ( user defined dataType)
 ➔ difference between Struct and Union is that -> in struct each element has its own storage memory allocation but in union there is only single shared memory location which is **equal to the size of largest data member** means the dataType in union which needed the highest bytes means MAX SIZE will become the single shared memory location
 
@@ -124,7 +124,7 @@ y.member2 = value; // at a time we can use only one member
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 
-### 💛 SELF REFRENTIAL STRUCTURE
+## 💛 SELF REFRENTIAL STRUCTURE
 ➔ one structure which have pointer as member and which point to the same type of structure <br/>
 ♻️ *overview* - [link](https://youtu.be/fpjAFx4v4oU)
 
@@ -138,7 +138,7 @@ y.member2 = value; // at a time we can use only one member
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 
-### 💙 POINTER
+## 💙 POINTER
 ➔ variable that contains the address of another variable. it is a variable that points to any other variable <br/>
 ➔ Pointers are used to dynamically allocate or deallocate memory using methods such as malloc(), realloc(), calloc(), and free(). <br/>
 ➔ size depends on architechure ex. 2 byte for 32 bit <br/>
@@ -156,3 +156,91 @@ printf("%d\n", *ptr) ; // using pointer the value of myAge (43)
 ```
 
 ![Pointer](https://www.w3resource.com/w3r_images/c_pointer.png)
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+
+## 💚 DYANMIC MEMORY ALLOCATION
+➔ **MEMORY ALLOCATION** assigned in 4 segment <br/>
+1) __code__ (text segment) <br/>
+2) __static and global variables__ ( 1= data segment- to store initialize data - during declaring values)( 2= BSS segment- to store 
+   declaration data -uninitialized storing)  <br/>
+3) __stack__ (main function then other function push and pop ...)(LIFO) (<br/>
+4) __heap__ (dynamic memory allocation) (it grows when dyanamic memory increase) <br/>
+
+<img src="https://scaler.com/topics/images/types-of-memory.webp" width="500" height="400">
+
+✔️ **Static memory allocation** <br/>
+➔  Allocation of memory before execution - compile time memory allocation <br/>
+➔  Non-reusable memory <br/>
+➔  Less optimal way <br/>
+
+✔️ **Dynamic memory allocation** <br/>
+➔  Allocation of memory at run time - run time memory allocation <br/>
+➔  reusable memory <br/>
+➔  More optimal way <br/>
+
+
+### ❄️ Dynamic memory allocation
+➔ the memory is allocated at runtime from the heap segment  <br/>
+<br/>
+
+1️⃣ **malloc()** : <br/>
+➔ memory allocation <br/>
+➔ reserves block of memory with given amount of bytes <br/>
+➔ return value of void pointer to allocated space ( here `ptr` give us void pointer of the allocated memory ) so we need to do typeCast according to our 
+   requirements ( we are typecasting in `int *ptr` here ) <br/>
+➔ However if space is insufficiant in Heap and memory allocation fails then it returns NULL pointer <br/>
+➔ all the values at allocated memory are initialized to *garbage value- GB* <br/>
+
+➔ Syntax
+```
+    ptr = (ptr - type *)malloc(size_in_bytes)
+```
+➔ Ex.
+```
+    int *ptr;
+    ptr = (int *)malloc(5 *sizeof(int));
+```
+2️⃣ **calloc** : <br/>
+➔ contiguous allocation <br/> 
+➔ reserves n (many-n number) block of memory with given amount of bytes <br/>
+➔ Similar to malloc , return value of void pointer to allocated space ( here `ptr` give us void pointer of the allocated memory ) so we need to do typeCast        according to our requirements ( we are typecasting in `int *ptr` here ) <br/>
+➔ Similar to malloc , However if space is insufficiant in Heap and memory allocation fails then it returns NULL pointer <br/>
+➔ all the values at allocated memory are initialized to *0 -zero* <br/>
+<br/>
+➔ Differences between malloc and calloc = First, we have to send as parameters the number of blocks needed along with their size in bytes. Second, in calloc(), the values at the allocation time are initialized to 0 instead of garbage value unlike what happens in malloc() <br/>
+➔ Syntax
+```
+    ptr = (ptr - type *)calloc(n, size_in_bytes)
+```
+➔ Ex.
+```
+    int *ptr;
+    ptr = (int *)calloc(5, sizeof(int));
+```
+3️⃣ **realloc()** : <br/>
+➔ reallocation of memory  <br/>
+➔ in cases where the dynamic memory allocated previously is insufficient and there is a need of increasing the already allocated memory to store more data (previously i have allocated 10 bytes to HEAP and now currently i need 16 bytes then i have to reallocated the bytes) <br/>
+➔ We also pass the previously declared memory address, and the new size of the memory in bytes while calling the function <br/>
+<br/>
+➔ Syntax
+```
+    ptr = (ptr - type *)realloc(ptr, new_size_in_bytes)
+```
+➔ Ex.
+```
+    ptr = (int *)realloc(ptr,10* sizeof(int));
+```
+
+4️⃣ **free()** : <br/>
+➔ disadvantages of dynamic memory allocation, it was mentioned that there is no automatic deletion of dynamically allocated memory when the pointer gets overwritten <br/>
+➔ So, to manually do it, we use the free() function to free up the allocated memory space. Therefore, free() is used to free up the space occupied by the allocated memory <br/>
+➔ This will free the memory being used by the program in the heap <br/>
+<br/>
+➔ Syntax
+```
+    free(ptr);
+```
+
+
