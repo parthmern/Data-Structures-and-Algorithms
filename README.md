@@ -202,7 +202,7 @@ printf("%d\n", *ptr) ; // using pointer the value of myAge (43)
     int *ptr;
     ptr = (int *)malloc(5 *sizeof(int));
 ```
-2️⃣ **calloc** : <br/>
+2️⃣ **calloc()** : <br/>
 ➔ contiguous allocation <br/> 
 ➔ reserves n (many-n number) block of memory with given amount of bytes <br/>
 ➔ Similar to malloc , return value of void pointer to allocated space ( here `ptr` give us void pointer of the allocated memory ) so we need to do typeCast        according to our requirements ( we are typecasting in `int *ptr` here ) <br/>
@@ -242,5 +242,114 @@ printf("%d\n", *ptr) ; // using pointer the value of myAge (43)
 ```
     free(ptr);
 ```
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+## 🧡 ADTs and ARRAY
+
+### ❄️ ADT - Abstract Data Types
+♻️ *overview*- [link](https://www.geeksforgeeks.org/abstract-data-types/)
+
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+
+## 💜 ARRAY
+➔ An array is a fixed-size collection of elements of the *same data type* that are stored in *contiguous memory locations*.<br/>
+➔ Elements in an array are accessed using their index <br/>
+
+![](https://media.geeksforgeeks.org/wp-content/uploads/20230302091959/Arrays-in-C.png)
+
+```
+    // DECLARE
+    type arrayName [ arraySize ] ;
+    double balance[5] ;
+
+    // Initializing
+    double balance[] = {1000.0, 2.0, 3.4, 7.0, 50.0} ;
+
+    //Accessing
+    balance[0] = 1000.0
+
+    // Traversal or Triversing - process in which we visit every element of the data structure
+    for (int i = 0; i < N; i++)
+    {
+        array_name[i];
+    }
+
+```
+
+ ➔ ❄️ **ARRAY OPERATIONS** <br/>
+ <br/>
+ ➔ **Traversal** <br/>
+ <br/>
+ ➔ **Insertion at specific position of array** <br/>
+ 
+```
+// C Program to Insert an element
+// at a specific position in an Array
+ 
+#include <stdio.h>
+ 
+int main()
+{
+    int arr[100] = { 0 };
+    int i, x, pos, n = 10;
+ 
+    // initial array of size 10
+    for (i = 0; i < 10; i++)
+        arr[i] = i + 1;
+ 
+    // print the original array
+    for (i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+    printf("\n");                      //OUTPUT= 1 2 3 4 5 6 7 8 9 10 
+ 
+    // element to be inserted
+    x = 50;
+ 
+    // position at which element
+    // is to be inserted
+    pos = 5;
+ 
+    // increase the size by 1
+    n++;
+ 
+    // shift elements forward
+    for (i = (n-1) ; i >= pos ; i--)
+        arr[i] = arr[i - 1];
+ 
+    // insert x at pos (position)
+    arr[pos - 1] = x;
+ 
+    // print the updated array
+    for (i = 0; i < n; i++)
+        printf("%d ", arr[i]);
+
+    printf("\n");
+ 
+    return 0;
+}
+
+// OUTPUT=
+// 1 2 3 4 5 6 7 8 9 10 
+// 1 2 3 4 50 5 6 7 8 9 10 
+```
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20190826133603/Insert-an-element-at-a-specific-position-in-an-Array.jpg" width="500px" height="400px" >
+
+➔ **Deletion at specific position of array** <br/>
+
+```
+for(i = pos-1 ; i<size-1 ; i++ )
+{
+    a[i]= a[i+1] ;
+}
+
+```
+
+📢 Type of array- <br/>
+1) 1-D array <br/>
+2) Multi-D array(2D, 3D) <br/>
+3) Dynamic array - it is the same as MALLOC() <br/>
 
 
