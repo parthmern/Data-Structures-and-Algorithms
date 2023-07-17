@@ -358,7 +358,7 @@ for(i = pos-1 ; i<size-1 ; i++ )
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 
-## 💚 LINKED LISTS :
+## 💚 LINKED LISTS : [best-for-code](https://www.javatpoint.com/singly-linked-list)
 
 ⚠️ **Why use linked list over array?** <br/>
 ➔ Arrays demand a contiguous memory location - sometimes it is not possible to get the too much long -block of memory allocation from system  <br/>
@@ -528,3 +528,18 @@ if(q->data == value)
 ```
 
 ![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-17/Image_5.webp)
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+### 💜 Circular Linked List <br/>
+➔ A circular linked list is a linked list where the last element points to the first element (head) hence forming a circular chain <br/>
+➔ Tail is connected to the Head. There is no node pointing to the NULL <br/>
+
+![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-19/Image_1.webp)
+
+```
+    fourth->next = head;
+    //or
+    tail->next = head;
+```
+
+
