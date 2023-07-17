@@ -353,3 +353,117 @@ for(i = pos-1 ; i<size-1 ; i++ )
 3) Dynamic array - it is the same as MALLOC() <br/>
 
 
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+
+## 💚 LINKED LISTS :
+
+⚠️ **Why use linked list over array?** <br/>
+➔ Arrays demand a contiguous memory location - sometimes it is not possible to get the too much long -block of memory allocation from system  <br/>
+➔ Lengthening an array is not possible. We would have to copy the whole array to some bigger memory location to lengthen its size. <br/>
+➔ ( inserting or deleting is difficult )inserting or deleting an element causes the elements to shift right and left, respectively  <br/>
+
+➔ It allocates the memory dynamically <br/>
+➔ All the nodes of the linked list are non-contiguously stored in the memory and linked together with the help of pointers <br/>
+➔ ( inserting or deleting is easy )because it is like chaining/chain  <br/>
+ <br/>
+➔ DRAWBACK=  <br/>
+➔ extra pointer required for every element which takes extra memory  <br/>
+➔ Random access not allowed bcz non-contiguous  <br/>
+
+💫 [learn self refrential structure](https://github.com/parthmern/Data-Structures-and-Algorithms/edit/main/README.md#-self-refrential-structure)
+<br/>
+```
+struct Node
+{
+    int data;
+    struct Node *next; // Self referencing structure
+};
+```
+♻️ Notes= [link](https://api.codewithharry.com/media/videoSeriesFiles/courseFiles/data-structures-and-algorithms-in-hindi-13/LinkedLists.pdf)
+<br/>
+
+➔ Malloc() :
+```
+struct Node *head ;
+head = (struct Node *)malloc(sizeof(struct Node)) ;
+```
+
+![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-14/Image_1.webp)
+
+*Every element in a linked list is called a node and consists of two parts, the data part, and the pointer part. The data part stores the value, while the pointer part stores the pointer pointing to the address of the next node.* <br/>
+
+### ❤️ Insertion :
+
+Case 1: Insert at the beginning <br/>
+Case 2: Insert in between <br/>
+Case 3: Insert at the end <br/>
+Case 4: Insert after the node <br/>
+<br/>
+<br/>
+⭕️ Case 1: Insert at the beginning <br/>
+➔ Syntax for creating a new node 
+```
+struct Node *ptr = (struct Node*) malloc (sizeof (struct Node)) ;
+
+ptr -> data = 9 ;
+
+ptr ->next = head ;
+head = ptr ;
+```
+![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-15/Image_2.webp)
+
+<br/>
+<br/>
+⭕️ Case 2: Insert in between <br/>
+➔ Syntax for creating a new node 
+```
+struct Node *ptr = (struct Node*) malloc (sizeof (struct Node)) ;
+
+ptr -> data = 9 ;
+
+ptr ->next = p->next  ; //where p = position of pointer = second,third
+p ->next = ptr ;
+```
+
+![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-15/Image_3.webp)
+
+*here p means the pointer ( second,third ) and firstly we have to connect the new ptr next to the p->next element so `ptr ->next = p->next` means we are storing the value of p->next in the Newly created ptr's NEXT position. secondly, `p ->next = ptr` we are storing the address of NEW ptr in the old p->next*
+<br/>
+<br/>
+<br/>
+⭕️ Case 3: Insert at the end <br/>
+➔ Syntax
+```
+struct Node *ptr = (struct Node*) malloc (sizeof (struct Node)) ;
+
+ptr -> data = 9 ;
+
+p ->next = ptr  ; 
+ptr ->next = NULL ;
+```
+
+![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-15/Image_4.webp)
+<br/>
+<br/>
+⭕️ Case 4: Insert after the node <br/>
+➔ Syntax
+```
+ptr->next = prevNode-> next;
+prevNode-> next = ptr;
+```
+![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-15/Image_5.webp)
+
+
+
+
+
+
+
+
+
+
+
+
