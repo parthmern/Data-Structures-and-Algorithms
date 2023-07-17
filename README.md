@@ -391,7 +391,7 @@ struct Node *head ;
 head = (struct Node *)malloc(sizeof(struct Node)) ;
 ```
 
-![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-14/Image_1.webp)
+![img](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-14/Image_1.webp)
 
 *Every element in a linked list is called a node and consists of two parts, the data part, and the pointer part. The data part stores the value, while the pointer part stores the pointer pointing to the address of the next node.* <br/>
 
@@ -413,10 +413,9 @@ ptr -> data = 9 ;
 ptr ->next = head ;
 head = ptr ;
 ```
-![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-15/Image_2.webp)
+![img](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-15/Image_2.webp)
 
-<br/>
-<br/>
+
 ⭕️ Case 2: Insert in between <br/>
 ➔ Syntax for creating a new node 
 ```
@@ -428,7 +427,7 @@ ptr ->next = p->next  ; //where p = position of pointer = second,third
 p ->next = ptr ;
 ```
 
-![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-15/Image_3.webp)
+![img](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-15/Image_3.webp)
 
 *here p means the pointer ( second,third ) and firstly we have to connect the new ptr next to the p->next element so `ptr ->next = p->next` means we are storing the value of p->next in the Newly created ptr's NEXT position. secondly, `p ->next = ptr` we are storing the address of NEW ptr in the old p->next*
 <br/>
@@ -446,24 +445,86 @@ ptr ->next = NULL ;
 ```
 
 ![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-15/Image_4.webp)
+
 <br/>
 <br/>
 ⭕️ Case 4: Insert after the node <br/>
-➔ Syntax
+➔ Syntax <br/>
+
 ```
-ptr->next = prevNode-> next;
-prevNode-> next = ptr;
+struct Node *ptr = (struct Node*) malloc (sizeof (struct Node)) ;
+
+ptr-> next = prevNode-> next ;
+prevNode -> next = ptr ;
 ```
-![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-15/Image_5.webp)
+<br/>
+<img src="https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-15/Image_5.webp">
 
+<br/>
 
+### ❤️ Deletion :
 
+⭕️ Case 1: Delete at the first node <br/>
+```
+struct Node * ptr = head ;
+head = head -> next ;
 
+free(ptr) ;
+```
+![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-17/Image_2.webp)
 
+⭕️ Case 2: delete node in between <br/>
+```
+Struct Node * p = head ;
 
+while( p = index-1 )
+{
+    p = p -> next;
+}
 
+Struct Node * q = p->next ;
+p->next = q->next ;
 
+free(q) ;
 
+```
+![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-17/Image_3.webp)
+<br/>
 
+⭕️ Case 3: delete node last <br/>
+```
+struct Node *p = head;
+struct Node *q = head->next;
 
+while(q->next !=NULL)
+{
+    p = p->next;
+    q = q->next;
+}
+    
+p->next = NULL;
+free(q);
+```
 
+![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-17/Image_4.webp)
+
+⭕️ Case 4: Deleting the element with a given value <br/>
+
+```
+struct Node *p = head;
+struct Node *q = head->next;
+
+while(q->data!=value && q->next!= NULL)
+{
+    p = p->next;
+    q = q->next;
+}
+
+if(q->data == value)
+{
+    p->next = q->next;
+    free(q);
+}
+```
+
+![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-17/Image_5.webp)
