@@ -541,5 +541,23 @@ if(q->data == value)
     //or
     tail->next = head;
 ```
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+### 💛 Circular Linked List <br/>
+➔ Each node contains a data part and two pointers in a doubly-linked list, one for the previous node and the other for the next node and Both the end pointers point to the NULL. (previous - data - next ) 
+
+![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-21/Image_1.webp)
+
+⚠️ *How is it different from a singly linked list?* <br/>
+➔ allows traversal in both directions <br/>
+➔ in head node, the previous address is of NULL value and same for the tail node, the next address is NULL <br/>
+
+```
+struct node   
+{  
+    struct node *prev;   
+    int data;  
+    struct node *next;   
+}   
+```
 
 
