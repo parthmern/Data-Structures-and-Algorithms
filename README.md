@@ -579,7 +579,7 @@ if(q->data == value)
     tail->next = head;
 ```
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
-### 💛 Circular Linked List <br/>
+### 💛 Doubly Linked List <br/>
 ➔ Each node contains a data part and two pointers in a doubly-linked list, one for the previous node and the other for the next node and Both the end pointers point to the NULL. (previous - data - next ) 
 
 ![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-21/Image_1.webp)
