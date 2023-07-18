@@ -242,6 +242,43 @@ printf("%d\n", *ptr) ; // using pointer the value of myAge (43)
 ```
     free(ptr);
 ```
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+## 🤎 RECURSION : 
+➔ Function call itself <br/>
+
+1️⃣ Direct recursion <br/>
+➔ When a function is called within itself directly (ex. head,tail,nested,tree ) <br/>
+
+```
+//factorail
+
+int fact(int n)
+{
+    if(n==1)
+    return 1;
+
+    else
+    return  n * fact(n-1) ; // stack application applied here
+}
+```
+
+2️⃣ Indirect recursion <br/>
+➔  when a function calls another function that eventually calls the original function and it forms a cycle  <br/>
+
+```
+int a()
+{
+    b();
+}
+
+int b()
+{
+    a();
+}
+```
+
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 ## 🧡 ADTs and ARRAY
@@ -577,6 +614,8 @@ struct node
 ➔ Recursion <br/>
 ➔ String reversal <br/>
  <br/>
+
+![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-24/Image_1.webp)
  
 ⭕️push() - insert elemernt <br/>
 
@@ -627,4 +666,6 @@ if(top==-1) //---> empty stack
 else
 printf(a[top])
 ```
+
+
 
