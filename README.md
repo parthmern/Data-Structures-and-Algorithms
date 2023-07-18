@@ -559,5 +559,72 @@ struct node
     struct node *next;   
 }   
 ```
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 
+## 💚 STACK :
+➔ linear data structure. <br/>
+➔ LIFO (Last In First Out) order <br/>
+![](https://scaler.com/topics/images/stack-in-c.webp)
+
+⚠️ **Applications of Stack**
+➔ We have talked about *function calls* before as well. A function until it returns reserves a space in the memory stack. Any function embedded in some function comes above the parent function in the stack. So, first, the embedded function ends, and then the parent one. Here, the function called last ends first.  (LIFO) <br/>
+➔ Infix to postfix conversion (and other similar conversions) <br/>
+➔ Parenthesis matching <br/>
+➔ UNDO/REDO <br/>
+➔ Recursion <br/>
+➔ String reversal <br/>
+ <br/>
+ 
+⭕️push() - insert elemernt <br/>
+
+```
+
+if (top == n-1 ); //---> overflow (where n=size)
+
+else
+top++;
+a[top]=x; //where x=inserted element that we can take using scanf
+
+```
+⭕️pop() - delete element <br/>
+
+```
+if(top==-1) //---> empty stack
+
+else
+top--;
+```
+
+⭕️display() - traversing <br/>
+
+```
+if(top==-1) //---> empty stack
+
+for(i=0 ; i <=top ; i++)
+{
+    print(a[i])
+}
+```
+
+⭕️Isempty() - check empty or not <br/>
+```
+if(top==-1) //---> empty stack
+```
+
+⭕️IsFull() - check full(overflow) or not <br/>
+
+```
+if (top == n-1 ); //---> overflow (where n=size)
+```
+
+⭕️peek() - peekest element
+```
+if(top==-1) //---> empty stack
+
+else
+printf(a[top])
+```
 
