@@ -777,5 +777,56 @@ printf(a[rear]) ;
 
 ![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-42/Image_5.webp)
 
+⭕️ enqueue() - insert an element (with Rear) <br/>
 
+```
+if( (rear+1)%n == front) //----> que is full
 
+else if ( rear==-1 && front==-1 )
+{
+    front = 0 ;
+    rear++ ;
+    a[rear] = data ;
+}
+
+else
+{
+    rear = ( rear+1 ) % n ;
+    a[rear] = data ;
+}
+
+```
+
+⭕️ dequeue() - delete element (from the FRONT ) <br/>
+
+```
+if ( rear==-1 && front==-1 ) //---> circularQueue is empty
+
+else if( front == rear )
+{
+    front = rear = -1 ;
+}
+
+else
+{
+    front = ( front % n )+ 1 ;
+}
+```
+
+⭕️ display() - displaying <br/>
+
+```
+if ( rear==-1 && front==-1 ) //---> circularQueue is empty
+
+else
+{
+    i = front ;
+
+    do
+    {
+        i = (i%n) + 1;
+        printf("%d",a[i]);
+    }
+    while ( i != rear)
+}
+```
