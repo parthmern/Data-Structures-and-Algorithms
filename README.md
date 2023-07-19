@@ -667,5 +667,115 @@ else
 printf(a[top])
 ```
 
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+
+## 💙 QUEUE :
+➔ A queue can be defined as an ordered list which enables insert operations to be performed at one end called REAR and delete operations to be performed at another end called FRONT <br/>
+➔ FIFO( First In First Out) <br/>
+➔ example, people waiting in line for a rail ticket form a queue <br/>
+
+![](https://static.javatpoint.com/ds/images/queue.png)
+
+![](https://static.javatpoint.com/ds/images/array-representation-of-queue.png)
+
+```
+int a[100];
+
+then we can take a[size] from it
+
+front = -1 ;
+rear = -1 ;
+```
+
+![](https://static.javatpoint.com/ds/images/array-representation-of-queue2.png)
+
+⭕️ enqueue() - insert an element (with REAR) <br/>
+
+```
+if( rear == n-1 ) //---> que is full
+
+else if( front==-1 && rear==-1 )
+{
+    front = 0 ;
+    rear ++ ;
+    a[rear] = insertedValue ;
+}
+
+else
+{
+    rear++ ;
+    a[rear] = insertedValue;
+}
+```
+
+![](https://static.javatpoint.com/ds/images/array-representation-of-queue3.png)
+
+⭕️ dequeue() - delete element (from the FRONT ) <br/>
+
+```
+if(front == -1 && rear ==-1) //---> que is empty
+
+else if( front==rear )
+{
+     front = rear = -1;
+}
+
+else
+{
+    front++ ;
+}
+```
+
+
+⭕️ display() - displaying <br/>
+
+```
+if(front==-1 && rear==-1)  //---> que is empty
+
+else
+{
+    for(i=front;i<=rear;i++)
+    printf("%d",a[i]) ;
+}
+```
+
+⭕️ isempty() - empty or not <br/>
+
+```
+if(front==-1 && rear==-1)  //---> que is empty
+```
+
+⭕️ isFull() - full or not <br/>
+
+```
+if( rear == n-1 ) //---> que is full
+```
+
+⭕️ peek() - peekest value <br/>
+
+```
+printf(a[rear]) ;
+```
+
+![](https://prepinsta.com/wp-content/uploads/2020/06/How-Queue-in-C-Programming-works-1024x646.png)
+
+*mark the REAR and FRONT*
+
+⚠️ **Drawback with Linear Queues** <br/>
+➔ *Memory wastage=* Aftter multiple enqueing and dequeing, the size of the queue gets reduced and new elements can't be added ( after doing DEQUEUE we are not able to add values in the dequeued index then this dequeued index memory location is wasted )
+
+<img src="https://prepinsta.com/wp-content/uploads/2020/06/Queues-in-C-Problem-or-limitations-with-Queue-768x484.png" height="350px" width="700px" >
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+
+### 💜 Circular Queue :
+➔ In a normal Queue, once queue becomes full, we can not insert the next element even if there is a space in front of queue. The solution to this is <br/>
+➔ in order to solve the issue of memory wastage from linear queue -- we have circular queue  <br/>
+
+![](https://cwh-full-next-space.fra1.digitaloceanspaces.com/videos/data-structures-and-algorithms-in-hindi-42/Image_5.webp)
+
 
 
