@@ -138,6 +138,38 @@ y.member2 = value; // at a time we can use only one member
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 
+### ♻️ Arrow Operator vs. Dot Operator [stackoverflow]
+
+```
+
+struct structName
+{
+    int member1 ;
+    float member2 ;
+};
+
+//difference
+
+// 1) DOT
+struct structName manual ;
+manual.member1 = 5 ;
+
+// 2) ARROW
+struct structName *pointer ;
+pointer -> member1 = 8 ;
+
+struct structName* emp = NULL; // creating pointer struct ( named emp )
+emp = (struct structName*) malloc(sizeof(struct structName)); // dynamic memory allocation
+emp -> member1 = 19 ;
+
+//we can also write like this
+struct structName* emp = (struct structName*) malloc(sizeof(struct structName));
+
+```
+
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
+
 ## 💙 POINTER
 ➔ variable that contains the address of another variable. it is a variable that points to any other variable <br/>
 ➔ Pointers are used to dynamically allocate or deallocate memory using methods such as malloc(), realloc(), calloc(), and free(). <br/>
