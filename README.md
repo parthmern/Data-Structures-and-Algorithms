@@ -225,6 +225,7 @@ printf("%d\n", *ptr) ; // using pointer the value of myAge (43)
 ➔ However if space is insufficiant in Heap and memory allocation fails then it returns NULL pointer <br/>
 ➔ all the values at allocated memory are initialized to *garbage value- GB* <br/>
 
+
 ➔ Syntax
 ```
     ptr = (ptr - type *)malloc(size_in_bytes)
@@ -234,6 +235,9 @@ printf("%d\n", *ptr) ; // using pointer the value of myAge (43)
     int *ptr;
     ptr = (int *)malloc(5 *sizeof(int));
 ```
+
+<img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/Malloc-function-in-c.png" width=600px height=200px >
+
 2️⃣ **calloc()** : <br/>
 ➔ contiguous allocation <br/> 
 ➔ reserves n (many-n number) block of memory with given amount of bytes <br/>
@@ -242,6 +246,8 @@ printf("%d\n", *ptr) ; // using pointer the value of myAge (43)
 ➔ all the values at allocated memory are initialized to *0 -zero* <br/>
 <br/>
 ➔ Differences between malloc and calloc = First, we have to send as parameters the number of blocks needed along with their size in bytes. Second, in calloc(), the values at the allocation time are initialized to 0 instead of garbage value unlike what happens in malloc() <br/>
+
+
 ➔ Syntax
 ```
     ptr = (ptr - type *)calloc(n, size_in_bytes)
@@ -251,11 +257,16 @@ printf("%d\n", *ptr) ; // using pointer the value of myAge (43)
     int *ptr;
     ptr = (int *)calloc(5, sizeof(int));
 ```
+
+<img src="https://asterisk-pbx.ru/wiki/_media/blog/calloc-function-in-c.png" width=600px height=200px >
+
 3️⃣ **realloc()** : <br/>
 ➔ reallocation of memory  <br/>
 ➔ in cases where the dynamic memory allocated previously is insufficient and there is a need of increasing the already allocated memory to store more data (previously i have allocated 10 bytes to HEAP and now currently i need 16 bytes then i have to reallocated the bytes) <br/>
 ➔ We also pass the previously declared memory address, and the new size of the memory in bytes while calling the function <br/>
 <br/>
+
+
 ➔ Syntax
 ```
     ptr = (ptr - type *)realloc(ptr, new_size_in_bytes)
@@ -265,15 +276,20 @@ printf("%d\n", *ptr) ; // using pointer the value of myAge (43)
     ptr = (int *)realloc(ptr,10* sizeof(int));
 ```
 
+<img src="https://asterisk-pbx.ru/wiki/_media/blog/realloc-function-in-c.png" width=600px height=300px >
+
 4️⃣ **free()** : <br/>
 ➔ disadvantages of dynamic memory allocation, it was mentioned that there is no automatic deletion of dynamically allocated memory when the pointer gets overwritten <br/>
 ➔ So, to manually do it, we use the free() function to free up the allocated memory space. Therefore, free() is used to free up the space occupied by the allocated memory <br/>
 ➔ This will free the memory being used by the program in the heap <br/>
 <br/>
+
 ➔ Syntax
 ```
     free(ptr);
 ```
+
+<img src="https://asterisk-pbx.ru/wiki/_media/blog/free-function-in-c.png" width=600px height=300px >
 
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
 ➖➖➖➖➖➖➖➖➖➖➖➖➖➖➖  <br/>
